@@ -1,6 +1,10 @@
-
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import LayoutWrap from "./Layout";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <LayoutWrap>
+      <Component {...pageProps} />
+    </LayoutWrap>
+  )
 }

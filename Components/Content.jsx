@@ -5,7 +5,7 @@ import { HomeOutlined } from "@ant-design/icons";
 
 const { Content } = Layout
 
-const ContentComponent = () => {
+const ContentComponent = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -22,7 +22,9 @@ const ContentComponent = () => {
         <Breadcrumb.Item>App</Breadcrumb.Item>
       </Breadcrumb>
       <Layout style={{ padding: '16px 0', background: colorBgContainer }}>
-        <Content style={{ padding: '0 16px', minHeight: 280 }}>Content</Content>
+        <Content style={{ padding: '0 16px', minHeight: 280 }}>
+          {children}
+        </Content>
       </Layout>
     </Content>
   )
